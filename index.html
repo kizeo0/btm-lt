@@ -137,22 +137,28 @@
         .icon-type {
             float: left;
             clear: left;
-            width: 180px;
+            width: 130px;
             border: none;
             margin-top: 10px;
         }
-        .cover-image {
+        /* Contenedor para agrupar crédito y carátula a la derecha */
+        .cover-box {
             float: right;
+            text-align: center;
+        }
+        .cover-image {
             max-width: 200px;
             border: 3px solid #FFD700;
             border-radius: 15px;
+            display: block;
+            margin: 0 auto;
         }
         .cover-credit {
-            clear: both;
-            text-align: center;
             font-style: italic;
-            margin-bottom: 15px;
+            margin-bottom: 5px;
             color: #aaa;
+            font-size: 12px;
+            text-align: center;
         }
         .info-table {
             width: 100%;
@@ -215,9 +221,9 @@
         hr {
             border: 1px solid #FFD700;
         }
-        /* Ajustes para pantallas pequeñas (PS3 lo renderizará igual) */
+        /* Ajustes para pantallas pequeñas */
         @media (max-width: 700px) {
-            .card-header h3, .cover-image, .icon-type {
+            .card-header h3, .cover-box, .icon-type {
                 float: none;
                 display: block;
                 margin: 10px auto;
@@ -265,9 +271,11 @@
             <h3>FULL PKG</h3>
             <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjF4frT1CfSZZpQd_A6hHFWaKyVojx0EPLZ3famEE_dt-H8g2PmwhGJtDG2DQc8NIKYw3ZAnFxd4n_a8FQ97O29ThwrFJF6Br6WwA4WwqKcqw4Iu5K42HnWRN8Yk0NZPkby9Jqwi5Yr-qWcf2L4bMCGDkahvK9dgkTdVNHIIgThv5jcAF_dRSjPlnKm4cUm/s320/pkg.png" class="icon-type" alt="PKG Icon">
             
-            <img class="cover-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWlz2oLdbbPncI-KTkCBFSqUoMsyyCv2RLlrLg7dfxGnmNd1HBGaq08XJvQS_fOH3JvIzYt4po6PAIXzg8KuZ_HRLhyV896SHvQ_dI33DzHRsbVmY99_w0KTFK4c__lUoh3GbmNSJlNsalIEvU_xqAFi-doJVwvd3Jhi6GFMg0vx-xOQu-WvbXtj8Is3ZB/s1280/photo_2026-02-26_23-19-12.jpg" alt="cover PKG" width="212" height="244">
+            <div class="cover-box" style="width: 212px;">
+                <div class="cover-credit">portada by <a href="https://youtube.com/@Infinitystok">infi</a></div>
+                <img class="cover-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWlz2oLdbbPncI-KTkCBFSqUoMsyyCv2RLlrLg7dfxGnmNd1HBGaq08XJvQS_fOH3JvIzYt4po6PAIXzg8KuZ_HRLhyV896SHvQ_dI33DzHRsbVmY99_w0KTFK4c__lUoh3GbmNSJlNsalIEvU_xqAFi-doJVwvd3Jhi6GFMg0vx-xOQu-WvbXtj8Is3ZB/s1280/photo_2026-02-26_23-19-12.jpg" alt="cover PKG" width="212" height="244">
+            </div>
         </div>
-        <div class="cover-credit">portada by <a href="https://youtube.com/@Infinitystok">infi</a></div>
 
         <table class="info-table">
             <tr><td><strong>Serial:</strong> NPEB01156</td><td><strong>Voces:</strong> Español Latino mx</td></tr>
@@ -287,9 +295,11 @@
             <h3>ISO VERSION GOTY</h3>
             <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjoWww8xiLEaFr5tWy5hHrl5XMdcDGMZ1tPeTGw3oCBUZ4-9KJlSF53awuVIwRaWOjgfCejvTrwBbxzS5xnW-agQoRDc9AbYIc6amsDO-EsFKnPYQcW0mezGPTKQqQ9pOaE9YibpKymCq7zoZxG-8S-ZqwGVyoJNsTp1AWw8y1dDO57JHaxqxtfpqtp-XIU/s320/iso.png" class="icon-type" alt="ISO Icon">
 
-            <img class="cover-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEicr3Nwku7Uxrj4Rp7u4tqdqhW6uZ5bEEKSWXzqlVRwNtf_Ff8IHOaWJ5ntUCWXbyynWPcZj_BrQfMLi_5zgw3xLZL0hyphenhyphenUp5wWV7Gg4MOY1_61wMGup3C_Omk6DvXwxnk60R8MZRsvTjyUVCHbqlxk5bEuKj59wyUMHZtbsDigHn2s77qcLCMNT7HhkQE44/s320/photo_2026-02-27_00-23-47.jpg" alt="cover ISO GOTY" width="198" height="230">
+            <div class="cover-box" style="width: 198px;">
+                <div class="cover-credit">portada by <a href="https://youtube.com/@Infinitystok">infi</a></div>
+                <img class="cover-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEicr3Nwku7Uxrj4Rp7u4tqdqhW6uZ5bEEKSWXzqlVRwNtf_Ff8IHOaWJ5ntUCWXbyynWPcZj_BrQfMLi_5zgw3xLZL0hyphenhyphenUp5wWV7Gg4MOY1_61wMGup3C_Omk6DvXwxnk60R8MZRsvTjyUVCHbqlxk5bEuKj59wyUMHZtbsDigHn2s77qcLCMNT7HhkQE44/s320/photo_2026-02-27_00-23-47.jpg" alt="cover ISO GOTY" width="198" height="230">
+            </div>
         </div>
-        <div class="cover-credit">portada by <a href="https://youtube.com/@Infinitystok">infi</a></div>
 
         <table class="info-table">
             <tr><td><strong>Serial:</strong> BLES00827 </td><td><strong>Voces:</strong> Español Latino mx</td></tr>
@@ -309,7 +319,7 @@
 
     <div class="warning-box">
         <h2>  ---¡ADVERTENCIA!---  </h2>
-        <p>Recuerden que Batman Arkham tendrá una exclusividad mínima de <strong>48HS</strong> (acto seguido solo lo tendrá <a href="https://t.me/PS3_MODS_CITY" target="_blank">ROMS CITY/MODS CITY</a>) y después de 2 semanas en los demás canales de YouTube (quién quiera).</p>
+        <p>Recuerden que Batman Arkham tendrá una exclusividad mínima de <strong>48HS</strong> en este grupo (acto seguido solo lo tendrá <a href="https://t.me/PS3_MODS_CITY" target="_blank">ROMS CITY/MODS CITY</a>) y después de 2 semanas en los demás canales de YouTube (quién quiera).</p>
         <p style="margin-top: 15px;">De lo contrario, if alguien lo resube o en su defecto saca provecho con enlaces que los mismos tienen <strong>ANUNCIOS que lucran con el proyecto ajeno</strong>, serán bajados y se les aplicará un STRIKE de manera automática, están más que avisados.</p>
         <hr>
         <p>✔️ Respeten el trabajo realizado, si quieren colaborar háganlo como corresponde.</p>
