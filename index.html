@@ -2,330 +2,256 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Batman Arkham Asylum · ESPAÑOL LATINO PS3</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* Estilos básicos compatibles con navegador PS3 */
         body {
-            background-color: #0b0c10;
-            font-family: 'Open Sans', sans-serif;
-            color: #e0e0e0;
-            line-height: 1.6;
-            padding: 20px;
+            background-color: #000;
+            color: #ccc;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            margin: 0;
+            padding: 15px;
         }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: rgba(10, 10, 15, 0.9);
-            backdrop-filter: blur(2px);
-            border-radius: 30px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 0 2px #f5c518 inset;
-            padding: 30px 25px;
-            border: 1px solid #333;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            color: #f5c518;
-            text-shadow: 3px 3px 0 #1f1f1f, 5px 5px 0 #000;
-            margin-bottom: 5px;
-            line-height: 1.2;
-        }
-
-        .subtitle {
-            font-size: 1.4rem;
-            font-weight: 600;
-            background: #1e1e1e;
-            display: inline-block;
-            padding: 5px 20px;
-            border-radius: 40px;
-            border-left: 5px solid #f5c518;
-            margin-bottom: 20px;
-            color: #ddd;
-        }
-
-        .banner img {
-            width: 100%;
-            max-width: 900px;
-            border-radius: 20px;
-            border: 3px solid #f5c518;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.7);
-            margin: 20px 0;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .separator {
-            text-align: center;
-            margin: 30px 0 20px;
-        }
-
-        .separator img {
-            max-width: 100%;
-            border-radius: 10px;
-        }
-
-        /* CRÉDITOS DESTACADOS */
-        .credits-box {
-            background: linear-gradient(145deg, #1a1e24, #0f1115);
-            border: 2px solid #f5c518;
-            border-radius: 40px;
-            padding: 30px 20px;
-            margin: 30px 0 40px;
-            box-shadow: 0 0 20px rgba(245, 197, 24, 0.4);
-        }
-
-        .credits-box h2 {
-            color: #f5c518;
-            font-size: 2rem;
-            text-align: center;
-            margin-bottom: 20px;
-            border-bottom: 2px dashed #f5c518;
-            padding-bottom: 10px;
-        }
-
-        .credits-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px 30px;
-        }
-
-        .credit-item {
-            font-size: 1.3rem;
-            font-weight: 600;
-            background: #23262b;
-            padding: 12px 25px;
-            border-radius: 50px;
-            transition: all 0.2s;
-            border: 1px solid #444;
-            box-shadow: 0 5px 0 #0a0a0a;
-        }
-
-        .credit-item a {
-            color: #f5c518;
+        a {
+            color: #FFD700; /* amarillo Batman */
             text-decoration: none;
-            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
         }
-
-        .credit-item a:hover {
+        a:hover {
             text-decoration: underline;
-            color: #ffffff;
+            color: #fff;
         }
-
-        .note-colab {
-            text-align: center;
-            font-size: 1.1rem;
-            margin-top: 25px;
-            background: #00000055;
-            padding: 10px;
-            border-radius: 30px;
-            border-left: 5px solid #f5c518;
-        }
-
-        /* TARJETAS DE VERSIONES */
-        .version-card {
-            background: #15181d;
-            border-radius: 40px;
-            padding: 25px;
-            margin-bottom: 40px;
-            border: 1px solid #333;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.7);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .version-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 6px;
-            background: linear-gradient(90deg, #f5c518, #7a5c0e, #f5c518);
-        }
-
-        .card-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-        }
-
-        .card-header h3 {
-            font-size: 2rem;
-            color: #f5c518;
-            background: #1e1e1e;
-            padding: 5px 20px;
-            border-radius: 60px;
-            display: inline-block;
-            border: 1px solid #f5c518;
-        }
-
-        .cover-image {
-            max-width: 200px;
-            border-radius: 15px;
-            border: 2px solid #f5c518;
-            transition: transform 0.3s;
-        }
-
-        .cover-image:hover {
-            transform: scale(1.02);
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            background: #1b1f26;
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            background-color: #111;
+            border: 3px solid #FFD700;
             padding: 20px;
-            border-radius: 30px;
+            border-radius: 20px; /* border-radius simple soportado */
+        }
+        h1, h2, h3 {
+            color: #FFD700;
+            font-family: Arial, sans-serif;
+            margin: 10px 0;
+            text-transform: uppercase;
+        }
+        h1 {
+            font-size: 28px;
+            text-align: center;
+            background-color: #222;
+            padding: 10px;
+            border: 2px solid #FFD700;
+            border-radius: 50px;
+        }
+        .subtitle {
+            font-size: 20px;
+            background-color: #222;
+            display: inline-block;
+            padding: 5px 15px;
+            border-left: 8px solid #FFD700;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .banner img {
+            max-width: 100%;
+            height: auto;
+            border: 3px solid #FFD700;
+            border-radius: 15px;
+            display: block;
+            margin: 15px auto;
+        }
+        .intro-box {
+            background-color: #1a1a1a;
+            padding: 15px;
+            border-left: 8px solid #FFD700;
+            text-align: center;
             margin: 20px 0;
-            border: 1px solid #2f353e;
+            border-radius: 20px;
         }
-
-        .info-item {
-            font-size: 1rem;
+        .intro-box p {
+            font-size: 16px;
         }
-
-        .info-item strong {
-            color: #f5c518;
-            font-weight: 600;
+        .credits-box {
+            background-color: #1a1a1a;
+            border: 3px solid #FFD700;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 30px;
+            text-align: center;
+        }
+        .credits-box h2 {
+            font-size: 24px;
+            border-bottom: 2px dashed #FFD700;
+            padding-bottom: 8px;
+        }
+        .credit-list {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+        .credit-list li {
+            display: inline-block;
+            background-color: #333;
+            color: #FFD700;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 8px 20px;
+            margin: 5px;
+            border: 2px solid #FFD700;
+            border-radius: 40px;
+        }
+        .credit-list li a {
+            color: #FFD700;
+        }
+        .credit-list li a:hover {
+            color: #fff;
+        }
+        .note-colab {
+            background-color: #222;
+            padding: 10px;
+            border-left: 8px solid #FFD700;
+            font-size: 16px;
+            border-radius: 20px;
+        }
+        .version-card {
+            background-color: #1f1f1f;
+            border: 2px solid #FFD700;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 30px;
+        }
+        .card-header {
+            overflow: hidden; /* clearfix */
+            margin-bottom: 15px;
+        }
+        .card-header h3 {
+            float: left;
+            font-size: 26px;
+            background-color: #222;
+            padding: 5px 20px;
+            border: 2px solid #FFD700;
+            border-radius: 50px;
+            margin: 0;
+        }
+        .cover-image {
+            float: right;
+            max-width: 200px;
+            border: 3px solid #FFD700;
+            border-radius: 15px;
+        }
+        .cover-credit {
+            clear: both;
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 15px;
+            color: #aaa;
+        }
+        .info-table {
+            width: 100%;
+            background-color: #222;
+            border: 1px solid #FFD700;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 15px 0;
+            border-collapse: separate;
+            border-spacing: 8px;
+        }
+        .info-table td {
+            padding: 8px;
+            background-color: #111;
+            border: 1px solid #FFD700;
+            border-radius: 10px;
+            color: #ddd;
+            font-size: 15px;
+        }
+        .info-table td strong {
+            color: #FFD700;
             display: inline-block;
             min-width: 70px;
         }
-
-        .download-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 25px;
+        .download-links {
+            text-align: center;
+            margin: 20px 0;
         }
-
-        .download-buttons a {
-            transition: transform 0.2s, filter 0.2s;
+        .download-links a {
+            display: inline-block;
+            margin: 5px;
         }
-
-        .download-buttons a:hover {
-            transform: scale(1.05);
-            filter: drop-shadow(0 0 10px #f5c518);
-        }
-
-        .download-buttons img {
+        .download-links img {
+            border: 3px solid #FFD700;
             border-radius: 12px;
-            border: 2px solid #f5c518;
             max-width: 100%;
             height: auto;
         }
-
         .warning-box {
-            background: #1e120b;
-            border: 3px solid #ffaa33;
+            background-color: #2a1a0a;
+            border: 4px solid #ffaa33;
+            padding: 20px;
             border-radius: 30px;
-            padding: 25px;
-            margin: 40px 0 20px;
+            margin: 30px 0;
             color: #ffd966;
-            font-weight: 600;
-            box-shadow: 0 0 15px #ffaa33;
+            font-weight: bold;
         }
-
         .warning-box h2 {
             color: #ffaa33;
-            font-size: 2rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .warning-box a {
-            color: #f5c518;
-            text-decoration: underline;
-            font-weight: bold;
-        }
-
-        .footer-message {
+            font-size: 26px;
             text-align: center;
-            margin-top: 40px;
-            font-size: 1rem;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            border-top: 2px solid #FFD700;
+            padding-top: 15px;
             color: #aaa;
-            border-top: 1px solid #333;
-            padding-top: 20px;
         }
-
-        .footer-message a {
-            color: #f5c518;
-            text-decoration: none;
+        hr {
+            border: 1px solid #FFD700;
         }
-
-        .badge {
-            background-color: #f5c518;
-            color: #0b0c10;
-            font-weight: bold;
-            padding: 3px 10px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            margin-left: 10px;
-        }
-
-        @media (max-width: 600px) {
-            h1 { font-size: 1.8rem; }
-            .card-header { flex-direction: column; align-items: start; }
+        /* Ajustes para pantallas pequeñas (PS3 lo renderizará igual) */
+        @media (max-width: 700px) {
+            .card-header h3, .cover-image {
+                float: none;
+                display: block;
+                margin: 10px auto;
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
 <div class="container">
 
-    <!-- Encabezado principal -->
+    <!-- ENCABEZADO -->
     <div style="text-align: center;">
         <h1>BATMAN ARKHAM ASYLUM</h1>
         <div class="subtitle">ESPAÑOL LATINO PS3 🇲🇽</div>
     </div>
 
-    <!-- Imagen principal (banner) -->
+    <!-- BANNER PRINCIPAL -->
     <div class="banner">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgOyHLK06Om4Kj-Y7_lfZyzniTH_GAxqqnD28lN0_VMN9Zk3bSk6Z33EU8sUnubzWKeU_RSPDR-zyk8jhFSWD-yzt6lb9H9oTpNyTRGz0wTf6rX1-myjlqEwxKMOsOztmBhB6-LDeYi9jCu7GMPTUf_QcA87ooEEp-1JWForCrB0MfE2iKpIr3r5Nyav0pc/s735/9667b69328e8b4c0b83cee37b8f0360e.jpg" alt="Batman Arkham Asylum banner">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgOyHLK06Om4Kj-Y7_lfZyzniTH_GAxqqnD28lN0_VMN9Zk3bSk6Z33EU8sUnubzWKeU_RSPDR-zyk8jhFSWD-yzt6lb9H9oTpNyTRGz0wTf6rX1-myjlqEwxKMOsOztmBhB6-LDeYi9jCu7GMPTUf_QcA87ooEEp-1JWForCrB0MfE2iKpIr3r5Nyav0pc/s735/9667b69328e8b4c0b83cee37b8f0360e.jpg" alt="Batman Arkham Asylum banner" width="644" height="292">
     </div>
 
-    <!-- Intro / aclaración -->
-    <div style="background: #1f262e; padding: 20px; border-radius: 30px; margin: 20px 0; text-align: center; border-left: 8px solid #f5c518;">
-        <p style="font-size: 1.2rem;">🎙️ Doblaje latino realizado por <strong>IG Studios</strong> originalmente para PC. <br> 
-        <span style="color: #f5c518;">IGStudiosMx no avala ni ha formado parte de ningún proyecto relacionado con adaptar este doblaje a otras plataformas o consolas.</span></p>
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi6UMsZzok1yPTvS0xPvHJQ9iKKSKGbLQoMw61ZZfFzPy9qC-ixljD0scouBGgt2BB9W8PG5iEJ39hi8xtP-EePkX-zG8ZfpMIQV6sie_M47vijEnyf8IrFHKxT435IUoLoUgklNu15s2GoJf7WSQwNFUeWQz2mrbYNUmvGhzcBi40PX5eJ82GA2v3fpTxq/s320/ICON0.PNG" alt="icono" style="margin-top: 15px; border-radius: 10px;">
+    <!-- ACLARACIÓN DOBLAJE -->
+    <div class="intro-box">
+        <p style="font-size: 16px;">🎙️ Doblaje latino realizado por <strong>IG Studios</strong> originalmente para PC.</p>
+        <p style="color: #FFD700; font-weight: bold;">IGStudiosMx no avala ni ha formado parte de ningún proyecto relacionado con adaptar este doblaje a otras plataformas o consolas.</p>
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi6UMsZzok1yPTvS0xPvHJQ9iKKSKGbLQoMw61ZZfFzPy9qC-ixljD0scouBGgt2BB9W8PG5iEJ39hi8xtP-EePkX-zG8ZfpMIQV6sie_M47vijEnyf8IrFHKxT435IUoLoUgklNu15s2GoJf7WSQwNFUeWQz2mrbYNUmvGhzcBi40PX5eJ82GA2v3fpTxq/s320/ICON0.PNG" alt="icono" width="234" height="129" style="border-radius: 10px; margin-top: 10px;">
     </div>
 
-    <!-- CRÉDITOS DESTACADOS (CORAZÓN DEL BLOG) -->
+    <!-- CRÉDITOS DESTACADOS -->
     <div class="credits-box">
         <h2>🦇 COLABORADORES DEL PORT 🦇</h2>
-        <div class="credits-grid">
-            <div class="credit-item"><a href="https://youtube.com/@Ridertron416" target="_blank">Ridertron416</a></div>
-            <div class="credit-item"><a href="https://youtube.com/@Infinitystok" target="_blank">Infi</a></div>
-            <div class="credit-item"><a href="https://youtube.com/@kizeo0" target="_blank">KiZeo</a></div>
-            <div class="credit-item"><a href="https://youtube.com/@YisusAhg" target="_blank">YisusAhg</a></div>
-            <div class="credit-item"><span>@KrossFate</span></div>
-            <div class="credit-item"><span>Maka (@Pandeuz)</span></div>
-            <div class="credit-item"><span>Helloimsantii (@Santiago2209)</span></div>
-        </div>
+        <ul class="credit-list">
+            <li><a href="https://youtube.com/@Ridertron416" target="_blank">Ridertron416</a></li>
+            <li><a href="https://youtube.com/@Infinitystok" target="_blank">Infi</a></li>
+            <li><a href="https://youtube.com/@kizeo0" target="_blank">KiZeo</a></li>
+            <li><a href="https://youtube.com/@YisusAhg" target="_blank">YisusAhg</a></li>
+            <li>@KrossFate</li>
+            <li>Maka (@Pandeuz)</li>
+            <li>Helloimsantii (@Santiago2209)</li>
+        </ul>
         <div class="note-colab">
             ⚡ Este PORT a PS3 fue realizado con varios colegas ⚡
         </div>
@@ -335,22 +261,20 @@
     <div class="version-card">
         <div class="card-header">
             <h3>📦 FULL PKG</h3>
-            <img class="cover-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWlz2oLdbbPncI-KTkCBFSqUoMsyyCv2RLlrLg7dfxGnmNd1HBGaq08XJvQS_fOH3JvIzYt4po6PAIXzg8KuZ_HRLhyV896SHvQ_dI33DzHRsbVmY99_w0KTFK4c__lUoh3GbmNSJlNsalIEvU_xqAFi-doJVwvd3Jhi6GFMg0vx-xOQu-WvbXtj8Is3ZB/s1280/photo_2026-02-26_23-19-12.jpg" alt="cover PKG">
+            <img class="cover-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWlz2oLdbbPncI-KTkCBFSqUoMsyyCv2RLlrLg7dfxGnmNd1HBGaq08XJvQS_fOH3JvIzYt4po6PAIXzg8KuZ_HRLhyV896SHvQ_dI33DzHRsbVmY99_w0KTFK4c__lUoh3GbmNSJlNsalIEvU_xqAFi-doJVwvd3Jhi6GFMg0vx-xOQu-WvbXtj8Is3ZB/s1280/photo_2026-02-26_23-19-12.jpg" alt="cover PKG" width="212" height="244">
         </div>
-        <div style="text-align: center; margin-bottom: 10px; font-style: italic; color: #ccc;">portada by <a href="https://youtube.com/@Infinitystok" style="color:#f5c518;">infi</a></div>
-        
-        <div class="info-grid">
-            <div class="info-item"><strong>Serial:</strong> NPEB01156</div>
-            <div class="info-item"><strong>Voces:</strong> Español Latino 🇲🇽</div>
-            <div class="info-item"><strong>Textos:</strong> Español 🇪🇸</div>
-            <div class="info-item"><strong>Tamaño:</strong> 3,08 GB</div>
-            <div class="info-item"><strong>Formato:</strong> PKG</div>
-        </div>
+        <div class="cover-credit">portada by <a href="https://youtube.com/@Infinitystok">infi</a></div>
 
-        <div class="download-buttons">
-            <a href="https://www.mediafire.com/file/w0w7r1qekygxnm5/01_NPEB01156_BATMAN_ARKHAM_ASYLUM_MOD_LATINO.pkg/file" target="_blank"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8bdumfhNj_LHI0wLBrTPmfkShTdkeq-JqTAYyRlwscOaMLunO1Mit3_FBv_LiBM9IxCIuZ6sGQx5Sf_gSEs06c1VJpuy2uH1e5zWJ0z4aNNb8R328OK5dS91dIXV9mmymj-Pr1HiUEnmvnmCP08lJKqwsq5g6zvNo42ZMb8aQqJvuAgKAMC9S1SoLHjfK/s320/Picsart_23-06-17_19-39-59-477.jpg" alt="boton descarga 1"></a>
-            <a href="https://www.mediafire.com/file/11glmv5otfyqpun/02_NPEB01156_BATMAN_ARKHAM_ASYLUM_MOD_LATINO.pkg/file" target="_blank"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-OBh4d6bxTaRGjYoG5WTU-abarzO9myxumfDkDCPM1rXHIO32gxLdpMDx3cugQ4HaRDJQOxQaTttMqrgZYxf9BeUbUI9we8VTSpDn2SDow7jTMsix3wEUqwOXOb4uASUe4p_PDdE9N9YboghZE4W-5JmiD3D8EdWsaciX32sSX1y4AhqH08Qkqx5SkTpU/s320/Picsart_23-06-17_19-40-06-367.jpg" alt="boton descarga 2"></a>
-            <a href="https://www.mediafire.com/file/ybcsr80xy9j1p14/03_Batman_Licencia.pkg/file" target="_blank"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiG5oNUaN7SQgIBDsVCUMUJ-Cb4aaAkWxv522sUKF4pajbL3MTQDjnn85epV_UZVimwlpgn1vCjTrSpqBgXzg-k-loPoiQKZpSRuWq5ug1JliCtWalBXGTeFsniP9wBUWBWHLDAHUDOtN4aszDfrGRYhp48sNtWUzyj4nHFppXi_SKlI_VfzMCtQl6kBah2/s320/Picsart_23-06-17_19-40-15-718.jpg" alt="boton licencia"></a>
+        <table class="info-table">
+            <tr><td><strong>Serial:</strong> NPEB01156</td><td><strong>Voces:</strong> Español Latino 🇲🇽</td></tr>
+            <tr><td><strong>Textos:</strong> Español 🇪🇸</td><td><strong>Tamaño:</strong> 3,08 GB</td></tr>
+            <tr><td><strong>Formato:</strong> PKG</td><td></td></tr>
+        </table>
+
+        <div class="download-links">
+            <a href="https://www.mediafire.com/file/w0w7r1qekygxnm5/01_NPEB01156_BATMAN_ARKHAM_ASYLUM_MOD_LATINO.pkg/file" target="_blank"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8bdumfhNj_LHI0wLBrTPmfkShTdkeq-JqTAYyRlwscOaMLunO1Mit3_FBv_LiBM9IxCIuZ6sGQx5Sf_gSEs06c1VJpuy2uH1e5zWJ0z4aNNb8R328OK5dS91dIXV9mmymj-Pr1HiUEnmvnmCP08lJKqwsq5g6zvNo42ZMb8aQqJvuAgKAMC9S1SoLHjfK/s320/Picsart_23-06-17_19-39-59-477.jpg" alt="boton descarga 1" width="320" height="86"></a>
+            <a href="https://www.mediafire.com/file/11glmv5otfyqpun/02_NPEB01156_BATMAN_ARKHAM_ASYLUM_MOD_LATINO.pkg/file" target="_blank"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-OBh4d6bxTaRGjYoG5WTU-abarzO9myxumfDkDCPM1rXHIO32gxLdpMDx3cugQ4HaRDJQOxQaTttMqrgZYxf9BeUbUI9we8VTSpDn2SDow7jTMsix3wEUqwOXOb4uASUe4p_PDdE9N9YboghZE4W-5JmiD3D8EdWsaciX32sSX1y4AhqH08Qkqx5SkTpU/s320/Picsart_23-06-17_19-40-06-367.jpg" alt="boton descarga 2" width="320" height="86"></a>
+            <a href="https://www.mediafire.com/file/ybcsr80xy9j1p14/03_Batman_Licencia.pkg/file" target="_blank"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiG5oNUaN7SQgIBDsVCUMUJ-Cb4aaAkWxv522sUKF4pajbL3MTQDjnn85epV_UZVimwlpgn1vCjTrSpqBgXzg-k-loPoiQKZpSRuWq5ug1JliCtWalBXGTeFsniP9wBUWBWHLDAHUDOtN4aszDfrGRYhp48sNtWUzyj4nHFppXi_SKlI_VfzMCtQl6kBah2/s320/Picsart_23-06-17_19-40-15-718.jpg" alt="boton licencia" width="320" height="86"></a>
         </div>
     </div>
 
@@ -358,44 +282,42 @@
     <div class="version-card">
         <div class="card-header">
             <h3>💿 ISO VERSION GOTY</h3>
-            <img class="cover-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEicr3Nwku7Uxrj4Rp7u4tqdqhW6uZ5bEEKSWXzqlVRwNtf_Ff8IHOaWJ5ntUCWXbyynWPcZj_BrQfMLi_5zgw3xLZL0hyphenhyphenUp5wWV7Gg4MOY1_61wMGup3C_Omk6DvXwxnk60R8MZRsvTjyUVCHbqlxk5bEuKj59wyUMHZtbsDigHn2s77qcLCMNT7HhkQE44/s320/photo_2026-02-27_00-23-47.jpg" alt="cover ISO GOTY">
+            <img class="cover-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEicr3Nwku7Uxrj4Rp7u4tqdqhW6uZ5bEEKSWXzqlVRwNtf_Ff8IHOaWJ5ntUCWXbyynWPcZj_BrQfMLi_5zgw3xLZL0hyphenhyphenUp5wWV7Gg4MOY1_61wMGup3C_Omk6DvXwxnk60R8MZRsvTjyUVCHbqlxk5bEuKj59wyUMHZtbsDigHn2s77qcLCMNT7HhkQE44/s320/photo_2026-02-27_00-23-47.jpg" alt="cover ISO GOTY" width="198" height="230">
         </div>
-        <div style="text-align: center; margin-bottom: 10px; font-style: italic; color: #ccc;">portada by <a href="https://youtube.com/@Infinitystok" style="color:#f5c518;">infi</a></div>
+        <div class="cover-credit">portada by <a href="https://youtube.com/@Infinitystok">infi</a></div>
 
-        <div class="info-grid">
-            <div class="info-item"><strong>Serial:</strong> BLES00827 📝</div>
-            <div class="info-item"><strong>Voces:</strong> Español Latino 🇲🇽</div>
-            <div class="info-item"><strong>Textos:</strong> Español 🇪🇸</div>
-            <div class="info-item"><strong>Tamaño:</strong> 6,87 GB 📚</div>
-            <div class="info-item"><strong>Formato:</strong> ISO DIVIDIDO</div>
-        </div>
+        <table class="info-table">
+            <tr><td><strong>Serial:</strong> BLES00827 📝</td><td><strong>Voces:</strong> Español Latino 🇲🇽</td></tr>
+            <tr><td><strong>Textos:</strong> Español 🇪🇸</td><td><strong>Tamaño:</strong> 6,87 GB 📚</td></tr>
+            <tr><td><strong>Formato:</strong> ISO DIVIDIDO</td><td></td></tr>
+        </table>
 
-        <div style="background: #0f1217; padding: 10px; border-radius: 30px; text-align: center; border: 1px solid #f5c518; margin-bottom: 20px;">
-            ⚙️ <strong style="color:#f5c518;">GUARDAR ARCHIVO EN dev_hdd0/PS3ISO</strong>
+        <div style="background: #222; padding: 12px; border-radius: 30px; text-align: center; border: 2px solid #FFD700; margin: 15px 0;">
+            ⚙️ <strong style="color:#FFD700;">GUARDAR ARCHIVO EN dev_hdd0/PS3ISO</strong>
         </div>
 
-        <div class="download-buttons">
-            <a href="https://www.mediafire.com/file/6tjmxedxn3vaujv/Batman+GOTY+-+MOD+LATINO+BLES00827.iso.0/file" target="_blank"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8bdumfhNj_LHI0wLBrTPmfkShTdkeq-JqTAYyRlwscOaMLunO1Mit3_FBv_LiBM9IxCIuZ6sGQx5Sf_gSEs06c1VJpuy2uH1e5zWJ0z4aNNb8R328OK5dS91dIXV9mmymj-Pr1HiUEnmvnmCP08lJKqwsq5g6zvNo42ZMb8aQqJvuAgKAMC9S1SoLHjfK/s320/Picsart_23-06-17_19-39-59-477.jpg" alt="boton iso 0"></a>
-            <a href="https://www.mediafire.com/file/5ow44pmm2e2kshw/Batman+GOTY+-+MOD+LATINO+BLES00827.iso.1/file" target="_blank"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-OBh4d6bxTaRGjYoG5WTU-abarzO9myxumfDkDCPM1rXHIO32gxLdpMDx3cugQ4HaRDJQOxQaTttMqrgZYxf9BeUbUI9we8VTSpDn2SDow7jTMsix3wEUqwOXOb4uASUe4p_PDdE9N9YboghZE4W-5JmiD3D8EdWsaciX32sSX1y4AhqH08Qkqx5SkTpU/s320/Picsart_23-06-17_19-40-06-367.jpg" alt="boton iso 1"></a>
+        <div class="download-links">
+            <a href="https://www.mediafire.com/file/6tjmxedxn3vaujv/Batman+GOTY+-+MOD+LATINO+BLES00827.iso.0/file" target="_blank"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8bdumfhNj_LHI0wLBrTPmfkShTdkeq-JqTAYyRlwscOaMLunO1Mit3_FBv_LiBM9IxCIuZ6sGQx5Sf_gSEs06c1VJpuy2uH1e5zWJ0z4aNNb8R328OK5dS91dIXV9mmymj-Pr1HiUEnmvnmCP08lJKqwsq5g6zvNo42ZMb8aQqJvuAgKAMC9S1SoLHjfK/s320/Picsart_23-06-17_19-39-59-477.jpg" alt="boton iso 0" width="320" height="86"></a>
+            <a href="https://www.mediafire.com/file/5ow44pmm2e2kshw/Batman+GOTY+-+MOD+LATINO+BLES00827.iso.1/file" target="_blank"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-OBh4d6bxTaRGjYoG5WTU-abarzO9myxumfDkDCPM1rXHIO32gxLdpMDx3cugQ4HaRDJQOxQaTttMqrgZYxf9BeUbUI9we8VTSpDn2SDow7jTMsix3wEUqwOXOb4uASUe4p_PDdE9N9YboghZE4W-5JmiD3D8EdWsaciX32sSX1y4AhqH08Qkqx5SkTpU/s320/Picsart_23-06-17_19-40-06-367.jpg" alt="boton iso 1" width="320" height="86"></a>
         </div>
     </div>
 
-    <!-- ADVERTENCIA (estilo murciélago) -->
+    <!-- ADVERTENCIA -->
     <div class="warning-box">
         <h2>⚠️ ¡ADVERTENCIA! ⚠️</h2>
         <p>Recuerden que Batman Arkham tendrá una exclusividad mínima de <strong>48HS</strong> en este grupo (acto seguido solo lo tendrá <a href="https://t.me/PS3_MODS_CITY" target="_blank">ROMS CITY/MODS CITY</a>) y después de 2 semanas en los demás canales de YouTube (quién quiera).</p>
         <p style="margin-top: 15px;">De lo contrario, si alguien lo resube o en su defecto saca provecho con enlaces que los mismos tienen <strong>ANUNCIOS que lucran con el proyecto ajeno</strong>, serán bajados y se les aplicará un STRIKE de manera automática, están más que avisados.</p>
-        <hr style="border-color: #f5c518; margin: 20px 0;">
+        <hr>
         <p>✔️ Respeten el trabajo realizado, si quieren colaborar háganlo como corresponde.</p>
         <p>✔️ Esto es y será un proyecto <strong>GRATUITO</strong> para la comunidad como proyectos anteriores y por supuesto, proyectos futuros.</p>
-        <p style="font-size: 1.2rem; margin-top: 20px;">🤝 No dejen de apoyar a los verdaderos involucrados. 🤝</p>
+        <p style="font-size: 18px; margin-top: 20px;">🤝 No dejen de apoyar a los verdaderos involucrados. 🤝</p>
     </div>
 
-    <!-- Separador y pie con derechos morales -->
-    <div class="footer-message">
+    <!-- PIE DE PÁGINA -->
+    <div class="footer">
         <p>🦇 Proyecto comunitario sin fines de lucro — Hecho por fans para fans 🦇<br>
-        <span style="color: #f5c518;">#IGStudiosMx #PS3 #BatmanArkham #EspañolLatino</span></p>
-        <p style="font-size:0.9rem;">Los enlaces y materiales pertenecen a sus respectivos autores. Gracias a todos los colaboradores.</p>
+        <span style="color: #FFD700;">#IGStudiosMx #PS3 #BatmanArkham #EspañolLatino</span></p>
+        <p style="font-size:12px;">Los enlaces y materiales pertenecen a sus respectivos autores. Gracias a todos los colaboradores.</p>
     </div>
 
 </div> <!-- container -->
